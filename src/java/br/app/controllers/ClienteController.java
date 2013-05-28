@@ -35,7 +35,6 @@ public class ClienteController extends HttpServlet {
                 request.getRequestDispatcher(
                         "AtualizarCliente.jsp").forward(request, response);
             } else {
-                System.out.println(">>>>>>>" + id);
                 Cliente alteraCliente = dao.find(Long.parseLong(id));
                 alteraCliente.setNome(nome.toString());
                 System.out.println(">>>>" + alteraCliente.getNome());
