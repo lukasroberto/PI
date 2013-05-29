@@ -37,7 +37,6 @@ public class ClienteController extends HttpServlet {
             } else {
                 Cliente alteraCliente = dao.find(Long.parseLong(id));
                 alteraCliente.setNome(nome.toString());
-                System.out.println(">>>>" + alteraCliente.getNome());
                 alteraCliente.setSobrenome(sobrenome.toString());
                 alteraCliente.setCpf(cpf.toString());
                 dao.atualizar(alteraCliente);
